@@ -1,0 +1,80 @@
+% !TEX root = ../main.tex
+\title{Problem Solving - Boulos 3 ed.}
+\author{Túlio Gomes}
+\date{may 2026}
+
+\maketitle
+
+\section{Introduction}
+This is a document that contains all solutions i'll make on the Boulos 3 ed. book. The main goal is to practice and improve my problem-solving skills in analytical geometry, and to have a reference for future studies.
+
+\section{Chapter 22 - Ellipse, Hyperbola and Parabola}
+\noindent
+% Definition 22-1 Section
+\newcommand{\ellipseDefinition}{d(X,F_1) + d(X,F_2) = 2a}
+\noindent
+\begin{tcolorbox}[colback=gray!5, colframe=gray!60, arc=2mm, title=\textbf{22-1 \quad Defini\c{c}\~{a}o}, coltitle=white, fonttitle=\bfseries]
+Sejam $F_1$ e $F_2$ pontos distintos, $2c$ sua dist\^{a}ncia e $a$ um n\'{u}mero real tal que $a > c$. O lugar geom\'{e}trico $\mathbf{E}$ dos pontos $X$ tais que $d(X,F_1) + d(X,F_2) = 2a$ chama-se \textbf{elipse}. Cada um dos pontos $F_1$ e $F_2$ \'{e} chamado \textbf{foco} da elipse, o segmento $F_1F_2$ \'{e} chamado \textbf{segmento focal}, seu ponto m\'{e}dio, \textbf{centro} da elipse, e $2c$, \textbf{dist\^{a}ncia focal}. A reta $F_1F_2$ chama-se \textbf{reta focal}, e qualquer segmento cujas extremidades (distintas) pertencem a $\mathbf{E}$ chama-se \textbf{corda} da elipse.
+\end{tcolorbox}
+
+\vspace{2em}
+
+% Exercise 22-2 Section
+\textbf{22-2} \quad Sejam $\mathbf{E}$ e $a$ como na Definição 22-1. Prove que:
+\begin{enumerate}[label=(\alph*), leftmargin=2.5em, itemsep=0.8ex, parsep=0ex, topsep=0.5ex]
+    \item os focos e o centro de $\mathbf{E}$ não pertencem a $\mathbf{E}$;
+    \item nenhum ponto do segmento focal de $\mathbf{E}$ pertence a $\mathbf{E}$;
+    \item existem precisamente dois pontos $A_1$ e $A_2$ da reta focal de $\mathbf{E}$ que pertencem a $\mathbf{E}$;
+    \item[\llap{$\rightarrow$\hspace{0.4em}}(d)] se $PQ$ é uma corda qualquer de $\mathbf{E}$, então $d(P,Q) \le 2a$;
+    \item[\llap{$\rightarrow$\hspace{0.4em}}(e)] a única corda de $\mathbf{E}$ de comprimento $2a$ é $A_1A_2$.
+\end{enumerate}
+
+\textbf{Solução de (a)}
+
+Colocando, convenientmente, o centro em (0,0) e o eixo das abscissas sobre $F_1F_2$, temos: $O = (0, 0)$; $F_1 = (-c, 0)$; $F_2 = (c, 0)$.
+
+Portanto, segue a equação da elipse, a partir de $X=(x, y)$, com os parâmetros atualizados:
+\newcommand{\distanceDefinitions}{
+\begin{aligned}
+d(X,F_1) &= \sqrt{(-c - x)^2 + (-y)^2} \\
+d(X,F_2) &= \sqrt{(c - x)^2 + (-y)^2}
+\end{aligned}
+}
+\begin{equation}
+\distanceDefinitions
+\label{eq:distance-definitions}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \sqrt{(-c-x)^2 + (-y)^2} + \sqrt{(c-x)^2 + (-y)^2} = 2a \\
+        \frac{ \sqrt{(-c-x)^2 + (-y)^2} + \sqrt{(c-x)^2 + (-y)^2}}{2} = a
+    \end{split}
+\end{equation}
+Se a > c, então:
+\begin{equation}
+    \frac{ \sqrt{(-c-x)^2 + (-y)^2} + \sqrt{(c-x)^2 + (-y)^2}}{2} > c
+\end{equation}
+De acordo com a hipótese, os focos e o centro não pertencem a $\mathbf{E}$, ou seja, não satisfazem a equação que define $\mathbf{E}$. Logo, $F_1=(-c,0)$ não satisfaz a equação:
+\begin{equation}
+    \begin{split}
+        \frac{\sqrt{(-c-(-c))^2 + (0)^2} + \sqrt{(c-(-c))^2 + (0)^2}}{2} > c \\
+        \frac{\sqrt{(c+c)^2}}{2} > c \\
+        c > c
+    \end{split}
+\end{equation}
+O mesmo ocorre para $F_2=(c,0)$:
+\begin{equation}
+    \begin{split}
+        \frac{\sqrt{(-c-c)^2 + (0)^2} + \sqrt{(c-(c))^2 + (0)^2}}{2} > c \\
+        \frac{\sqrt{4c^2}}{2} > c \\
+        c > c
+    \end{split}
+\end{equation}
+Assim como para O:
+\begin{equation}
+    \begin{split}
+        \frac{\sqrt{(-c-0)^2 + (0)^2} + \sqrt{(c-0)^2 + (0)^2}}{2} > c \\
+        \frac{\sqrt{c^2} + \sqrt{c^2}}{2} > c \\
+        c > c
+    \end{split}
+\end{equation}
