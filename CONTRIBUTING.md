@@ -21,4 +21,4 @@ For example, i've added a file called `boulos-resol.tex` in the `analytical-geom
 
 Feel free to create your own folders with your tex files.
 
-*Note:* For the pdf view to work, you must update main.tex with the file you created.
+*Note:* For the pdf view to work, you must create and update `main.tex` in the project root with the file you created. There's an example file at `main.tex.example` that you can copy.
