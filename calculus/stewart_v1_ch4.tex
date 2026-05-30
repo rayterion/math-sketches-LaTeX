@@ -1,0 +1,124 @@
+\title{Resolvendo problemas - Stewart 9 ed. - Cap. 4}
+\author{Túlio Gomes}
+\date{may 2026}
+
+\maketitle
+
+\section{Exercísios 4.1}
+\subsection{51-66}
+Encontre os valores máximo e mínimo das funções no intervalo dado \\
+\textbf{51} $f(x) = 12 + 4x -x^2$, $[0, 5]$
+
+\textbf{Solução:} O primeiro passo segundo o método do intervalo fechado é achar os pontos críticos.
+\begin{equation}
+    \frac{d}{dx}f(x) = -2x + 4
+\end{equation}
+\begin{equation}
+    \begin{split}        
+        -2x + 4 = 0 \\
+        x = 2
+    \end{split}
+\end{equation}
+O ponto $P=(2, 16)$ é o único ponto crítico.
+O segundo passo seria encontra o valor de f nos extremos do intervalo:
+\begin{equation}
+    \begin{split}
+        f(0) = 12 \\
+        f(5) = 7
+    \end{split}
+\end{equation}
+
+Logo, conclui-se que o valor mínimo de $f$ em $[0, 5]$ é 7, e seu máximo é 16.
+
+\subsection{67} 
+Se $a$ e $b$ são números positivos, ache o valor máximo de \\
+ $f(x) = x^a(1-x)^b$, $0 \leqslant x \leqslant 1$
+
+ \textbf{Solução:} Seguindo o método do intervalo fechado: 
+ \begin{equation}
+    \begin{split}
+        g(x) = x^a \\
+        h(x) = (1-x)^b        
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        g'(x) = \frac{d}{dx}e^{ln(x^a)} \\
+        g'(x) = x^a\frac{d}{dx}aln(x) \\
+        g'(x) = a\frac{x^a}{x} = ax^{a-1}
+    \end{split}
+ \end{equation}
+
+  \begin{equation}
+    \begin{split}
+        h'(x) = \frac{d}{dx}e^{bln(1-x)} \\
+        h'(x) = b(1-x)^b\frac{d}{dx}ln(1-x) \\
+        h'(x) = -b\frac{(1-x)^b}{1-x} = -b(1-x)^{b-1}
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        \frac{dy}{dx} = g'(x)h(x) + g(x)h'(x) \\
+        =ax^{a-1}(1-x)^b-b(1-x)^{b-1}x^a
+    \end{split}
+ \end{equation}
+
+ Agora que temos a derivada de $f$, podemos encontrar os pontos críticos.
+
+ \begin{equation}
+    \begin{split}
+        ax^{a-1}(1-x)^b-b(1-x)^{b-1}x^a = 0 \\
+    \end{split}
+ \end{equation}
+
+ Isso só é verdade em dois cenários: 
+ \begin{equation}
+    ax^{a-1}(1-x)^b = bx^a(1-x)^{b-1}
+    \label{eq:67first-scenario}
+ \end{equation}
+
+ \begin{equation}
+    \left\{
+        \begin{aligned}
+            ax^{a-1}(1-x)^b = 0 \\
+            b(1-x)^{b-1}x^a = 0
+        \end{aligned}
+    \right.
+    \label{eq:67second-scenario}
+ \end{equation}
+
+ Desenvolvendo a equação~\ref{eq:67first-scenario}:
+ \begin{equation}
+    \begin{split}
+        \frac{a}{b}\frac{x^{a-1}}{x^a} = \frac{(1-x)^{b-1}}{(1-x)^b} \\
+        \frac{a}{b}x^{-1} = (1-x)^{-1} \\
+        \frac{a}{b} = \frac{x}{(1-x)}
+    \end{split}
+ \end{equation}
+
+ Então quando $a=x$ e $b=1-x$ $\forall x\in[0, 1]$, esse x será considerado ponto crítico de $f$
+
+ Agora desenvolvendo a primeira equação de~\ref{eq:67second-scenario}:
+ \begin{equation}
+    \begin{split}
+        \left\{
+            \begin{aligned}
+                ax^{a-1}=0 \\
+                ou \\
+                (1-x)^b=0
+            \end{aligned}
+        \right. \\
+    \end{split} 
+ \end{equation}
+ Como $a$ e $b$ são valores positivos, não há solução para esse sistema.
+ 
+ Agora, achando os valores nos extremos do intervalo definido para $x$:
+\begin{equation}
+    \begin{split}
+        f(0) = 0 \\
+        f(1) = 0
+    \end{split}
+\end{equation}
+Portanto o valor máximo de $f(x)$ é o maior valor possível de $m$ tal que $m=0$ ou $m=f(c)$, $\forall c\in [0,1]$, tal que $a=c$ e $b=1-c$
