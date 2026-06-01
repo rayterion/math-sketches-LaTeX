@@ -77,3 +77,38 @@ Assim como para O:
         c > c
     \end{split}
 \end{equation}
+
+\section{Chapter 23 - Conic Sections}
+
+\textbf{23-3} Usando uma translação, procure transformar $g(x,y)$ de modo que os coeficientes dos
+termos lineares passem a ser nulos.\\
+(a) $g(x,y) = x^2 + 2y^2 - 4x - 4y -1$ \\
+
+
+\textbf{solução (a)}: Dada uma equação cônica no formato $ax^2 +bxy + cy^2 + dx + ey + f$, os termos lineares são $d$ e $e$. Analisando a equação dada, temos que os termos lineares são $-4$ e  $-4$. Agora vamos fazer uma translação:
+
+\begin{equation}
+    \begin{split}
+        g(X + h, Y + k) = (X + h)^2 + 2(Y + k)^2 -4(X + h) -4(Y + k) - 1 \\
+        =X^2 +2Xh + h^2 + 2(Y^2 +2Yk + k^2) -4X -4h -4Y -4k -1 \\
+        =X^2 + 2Y^2 +X(2h - 4) + Y(4k - 4) + (2k^2 + h^2 - 4h -4k -1)
+    \end{split}
+\end{equation}
+
+Isso significa que
+\begin{equation}
+    \left\{
+        \begin{aligned}
+            2h - 4 = 0 \\
+            4k - 4 = 0
+        \end{aligned}
+    \right.
+\end{equation}
+Logo, $h=2$ e $k=1$, que implica na equação cônica final:
+\begin{equation}
+        g(X, Y) = X^2 + 2Y^2 - 7
+\end{equation}
+
+
+(b) $g(x,y) = 3x^2+ 12xy + 12y^2 -2x -4y -9$ \\
+(c) $g(x,y) = x^2 - 6x - 5y + 14$ \\
