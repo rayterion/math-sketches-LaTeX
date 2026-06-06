@@ -78,6 +78,60 @@ Assim como para O:
     \end{split}
 \end{equation}
 
+\textbf{22-3} São dados, em cada caso, o parâmetro geométrico e os focos de uma elipse. Determinar a equação da Ellipse. \\
+(a) $a=4$ $F_1=(-3, 2)$ $F_2=(-3, 6)$
+
+\textbf{Solução:} Seja $c$ a distância do foco ao centro:
+\begin{equation}
+    \begin{split}
+        \overrightarrow{F_1F_2} = F_2-F_1 \\
+        \overrightarrow{F_1F_2} = <0, 4>
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        2c=|\overrightarrow{F_1F_2}| \\
+        2c = 4 \\
+        c = 2
+    \end{split}
+\end{equation}
+
+Pela relação fundamental pitagórica:
+\begin{equation}
+    \begin{split}
+        a^2 = b^2 + c^2 \\
+        16 = b^2 + 4 \\
+        b = \pm \sqrt{12}
+    \end{split}
+\end{equation}
+
+Para determinar a equação final, devemos, primeiro, determinar $h$ e $k$, valores que determinam a translação cartesiana, uma vez que a elipse pode ser definida por:
+\begin{equation}
+    \frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1
+\end{equation}
+Para elipses com o eixo maior sobre o eixo das abscissas, e
+\begin{equation}
+    \frac{(x - h)^2}{b^2} + \frac{(y - k)^2}{a^2} = 1
+    \label{eq:ordenadas-elipse-redux}
+\end{equation}
+para elipses com eixo maior sobre as ordenadas.
+
+Para o nosso caso de uso, A equação definida por (\ref{eq:ordenadas-elipse-redux}) é mais útil. Para usála, precisamos achar o centro da elipse, que definiremos por $C=(h, k)$:
+\begin{equation}
+    \begin{split}
+        C = F_1 + \overrightarrow{F_1F_2}/2 \\
+        C = (-3, 2) + (0, |c|) = (-3, 4)
+    \end{split}
+\end{equation}
+
+Agora podemos substituir na equação reduzida:
+
+\begin{equation}
+    \begin{split}
+        \frac{(x + 3)^2}{12} + \frac{(y - 4)^2}{16} = 1
+    \end{split}
+\end{equation}
+
 \section{Chapter 23 - Conic Sections}
 
 \textbf{23-3} Usando uma translação, procure transformar $g(x,y)$ de modo que os coeficientes dos
