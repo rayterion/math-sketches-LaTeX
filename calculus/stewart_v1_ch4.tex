@@ -209,3 +209,24 @@ se $f$ possui mais de uma raíz real, então $f(a)=0=f(b)$. Deduz-se que $f(x)$ 
         3x^2 + 1 \geq 1
     \end{split}
 \end{equation}
+
+\textbf{13} Seja $f(x) = 1 - x^{2/3}$. Mostre que $f(-1)=f(1)$, mas não existe um número $c$ em (-1, 1) tal que $f'(c)=0$. Por que isso não contradiz o Teorema de Rolle?
+
+\textbf{solução: } 
+Mostrando que $f(1)=f(-1)$:
+\begin{equation}
+    \begin{split}
+        f(1) = 1 - 1^{2/3} = 0 \\
+        f(-1) = 1 - (-1)^{2/3} = 0
+    \end{split}
+\end{equation}
+
+Verificamos que $f(a)=f(b)$. A função é contínua, mas não é derivável em $(-1,1)$.
+\begin{equation}
+    \begin{split}
+        f'(x)=-\frac{2}{3}x^{-1/3} \\
+        f'(x) = - \frac{2}{3x^{1/3}} \\
+        f'(0) \text{ é indefinida}
+    \end{split}
+\end{equation}
+Logo, como as hipóteses necessárias para ser verdadeiro o teorema de Rolle não foram comprovadas, o teorema não pode ser utilizado nessa situação. isso significa que o teorema não foi violado.
