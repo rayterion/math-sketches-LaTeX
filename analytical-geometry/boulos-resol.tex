@@ -191,3 +191,34 @@ Logo, $h=2$ e $k=1$, que implica na equação cônica final:
 
 (b) $g(x,y) = 3x^2+ 12xy + 12y^2 -2x -4y -9$ \\
 (c) $g(x,y) = x^2 - 6x - 5y + 14$ \\
+
+\newcommand{\Vp}{\mathbb{V}_{\pi}}
+\textbf{22-1} (a) Sejam $B = (\vec{i}, \vec{j})$ uma base ortonormal de $\Vp$, P um ponto qualquer de $\pi$, $\vec{u} = (m, n)_B$ e $\vec{v} = (p, q)_B$ vetores LI de $\Vp$. Mostre que a área do paralelogramo de vértices P, $P + \vec{u}$, $P + \vec{v}$ e $P + \vec{u} + \vec{v}$ é $|mq - np|$.
+
+\textbf{Solução:}
+Sabendo que a figura é um paralelogramo, podemos usar a definição geometrica da área do paralelogramo ($A = b \cdot h$) para descobrir a área final.
+
+\newcommand{\puv}{proj_{\vec{v}}\vec{u}}
+Vamos usar como o vetor que representa a base do paralelogramo o vetor $\vec{v}$. Para descobrir a altura do paralelogramo, podemos usar $h = |\vec{u}-\puv|$
+
+\newcommand{\cof}{\frac{mp + nq}{p^2 + q^2}}
+\newcommand{\h}{\sqrt{(m - \cof p)^2 + (n - \cof q)^2}}
+\begin{equation}
+    \begin{split}
+        \puv = \frac{\vec{v} \cdot \vec{u}}{\vec{v} \cdot \vec{v}} \vec{v} = \cof \vec{v} \\
+        h = |(
+            m - \cof p,
+            n - \cof q
+        )| \\
+         = \h
+    \end{split}
+\end{equation}
+
+Vamos achar, por hora o resultado com os vetores em si:
+\begin{equation}
+    \begin{split}
+        A = |\vec{v}| \cdot |\vec{u} - \puv| \\
+        A^2 = |\vec{v}|^2 \cdot |\vec{u} - \puv|^2 = |\vec{v}|^2 \cdot (|\vec{u}|^2 - 2\vec{u}\puv + |\puv|^2) \\
+        = (|\vec{v}||\vec{u}|^2)
+    \end{split}
+\end{equation}
